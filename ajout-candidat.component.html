@@ -1,0 +1,52 @@
+<div class="container">
+  <h2>Saisie de candidature</h2>
+
+  <form [formGroup]="candidatForm" (ngSubmit)="enregistrerCandidat()">
+
+    <label for="numeroCarte">Numéro de carte d'électeur :</label>
+      <input type="text" id="numeroCarte" formControlName="numeroCarte" maxlength="13" required>
+
+
+    <p class="error-message" *ngIf="messageErreur">{{ messageErreur }}</p>
+
+
+    <div *ngIf="infosCandidat">
+      <p><strong>Nom :</strong> {{ infosCandidat.nom }}</p>
+      <p><strong>Prénom :</strong> {{ infosCandidat.prenom }}</p>
+      <p><strong>Date de naissance :</strong> {{ infosCandidat.dateNaissance }}</p>
+    </div>
+
+
+    <div *ngIf="verificationEffectuee && !candidatExiste">
+      <p>Le candidat n'est pas présent dans le fichier électoral.</p>
+    </div>
+
+
+    <div *ngIf="infosCandidat && !candidatExiste">
+      <label for="email">Email :</label>
+      <input type="email" id="email" formControlName="email">
+
+      <label for="telephone">Téléphone :</label>
+      <input type="text" id="telephone" formControlName="telephone" required>
+
+      <label for="parti">Nom du parti politique :</label>
+      <input type="text" id="parti" formControlName="parti">
+
+      <label for="slogan">Slogan :</label>
+      <input type="text" id="slogan" formControlName="slogan">
+
+      <label for="photo">Photo :</label>
+      <input type="file" id="photo" formControlName="photo">
+
+      <label>Couleurs du parti :</label>
+      <input type="color" formControlName="couleur1">
+      <input type="color" formControlName="couleur2">
+      <input type="color" formControlName="couleur3">
+
+      <label for="urlInfos">Lien d’informations :</label>
+      <input type="url" id="urlInfos" formControlName="urlInfos">
+
+      <button type="submit" [disabled]="candidatForm.invalid">Enregistrer</button>
+    </div>
+  </form>
+</div>
