@@ -1,0 +1,113 @@
+/* Global */
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f3f2f1;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Appliquer une hauteur complète à la page */
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f9fa; /* Fond léger et professionnel */
+}
+
+/* Conteneur du formulaire */
+.container {
+  background: #ffffff;
+  padding: 30px;
+  width: 500px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  border-top: 5px solid #147a36; /* Bleu officiel UK Government */
+  text-align: left;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Titre */
+h2 {
+  font-size: 22px;
+  font-weight: bold;
+  color: #0b0c0c;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+/* Labels */
+label {
+  font-size: 16px;
+  font-weight: bold;
+  color: #0b0c0c;
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Inputs */
+input[type="file"],
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #b1b4b6;
+  border-radius: 5px;
+  font-size: 14px;
+  background: #ffffff;
+  transition: border-color 0.3s ease-in-out;
+}
+
+input[type="file"]:hover,
+input[type="text"]:hover {
+  border-color: #147a36;
+}
+
+input[type="file"]:focus,
+input[type="text"]:focus {
+  border-color: #147a36;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(1, 44, 22, 0.3);
+}
+
+/* Bouton */
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #147a36;
+  color: white;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 15px;
+  border-radius: 5px;
+  transition: background 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #147a36;
+}
+
+button:disabled {
+  background-color: #b1b4b6;
+  cursor: not-allowed;
+}
+
+/* Messages d'erreur */
+.error {
+  margin-top: 15px;
+  color: #d4351c;
+  font-weight: bold;
+  background: #f3e1e1;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+}

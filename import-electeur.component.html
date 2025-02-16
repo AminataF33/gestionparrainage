@@ -1,0 +1,21 @@
+<div class="container">
+    <h2>Importation des électeurs</h2>
+    <form [formGroup]="importForm" (ngSubmit)="validateFile()">
+      <div>
+        <label for="file">Fichier électoral (CSV):</label>
+        <input type="file" (change)="onFileSelected($event)" />
+      </div>
+      
+      <div>
+        <label for="checksum">Empreinte Checksum (SHA256):</label>
+        <input type="text" id="checksum" formControlName="checksum" (input)="onChecksumChange($event)" />
+      </div>
+      
+      <button type="submit" [disabled]="importForm.invalid">Valider l'importation</button>
+    </form>
+  
+    <div *ngIf="uploadError" class="error">
+      {{ uploadError }}
+    </div>
+  </div>
+  
