@@ -1,0 +1,21 @@
+<div class="dashboard">
+    <aside class="sidebar">
+      <div class="welcome">
+        <h1>Bienvenue sur le Portail DGE</h1>
+        <p>Veuillez sélectionner une action dans le menu à gauche.</p>
+      </div>
+      <ul>
+        <li><a routerLink="/ouverture-parrainage">📅 Ouverture Parrainage</a></li>
+        <li><a routerLink="/import-electeur">📥 Import Electeurs</a></li>
+        <li><a routerLink="/ajout-candidat">🗳️ Ajout Candidat</a></li>
+        <li><a routerLink="/login" (click)="logout()">🚪 Déconnexion</a></li>
+      </ul>
+    </aside>
+  
+    <main class="content">
+      <div class="container">
+        <router-outlet></router-outlet>
+      </div>
+    </main>
+  </div>
+  
